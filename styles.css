@@ -1,0 +1,106 @@
+body {
+  perspective: 500px;
+}
+
+button {
+  height: 90px;
+  width: 290px;
+  font-size: 28px;
+  color: white;
+  border: none;
+  background-color: blue;
+
+  /* 
+
+  transition(format): trans-prop duration timing-func delay;
+
+  transition-prop - property to be animated, 
+  transition-duration - duration of animation 
+  
+  transition-timing-function - how the change in property will occur, fast first then slow etc
+    ease - the change starts slow then go faster then finish slow, like in After Effects
+    linear - same rate
+    ease-in - slow first then fast
+    ease-out - fast first then slow
+    ease-in-out - the change starts slow then go faster then slow
+
+  transition-delay - time before transition starts
+  */
+  /* transition-property: background-color color width; 
+  transition-duration: 1s; */
+  transition: all 3s ease-in 2s;
+}
+
+button:hover {
+  background-color: green;
+  color: black;
+  border-radius: 50%;
+}
+
+.move {
+  margin: 2em;
+  width: 150px;
+  height: 150px;
+  padding: 10px 15px;
+  background-color: red;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  border-radius: .5em;
+  font-size: 20px;
+  /* translate - property that changes location of div */
+  transition-property: translate();
+  transition-duration: 3s;
+}
+
+#ease {
+  transition-timing-function: ease;
+}
+
+#linear {
+  transition-timing-function: linear;
+}
+
+#ease-in {
+  transition-timing-function: ease-in;
+}
+
+#ease-out {
+  transition-timing-function: ease-out;
+}
+
+#ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.move:hover {
+  /* translate moves object by 900px in x, 0 in y */
+  transform: translate(900px, 0);
+}
+
+#tite {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  background-color: aqua;
+  transition: transform 2s;
+  /* transform-origin: top left; */
+}
+/* 
+#tite:hover {
+  transform: translateX(-500px);
+} */
+
+/* #tite:hover {
+  transform: rotate(45deg);
+} */
+
+/* #tite:hover {
+  transform: skewX(-30deg);
+} */
+
+#tite:hover {
+  transform: rotateY(720deg);
+}
